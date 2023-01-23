@@ -2,10 +2,32 @@ h2{
     text-align: center;
     margin-top: 50px;
     margin-bottom: 50px;
+    color: #ffbf00c4;
 }
 
 p{
     text-align:center;
     font-size: large;
     color: #ffbf00c4;
+}
+
+.content {
+    margin: 30px;
+    background: rgba(23, 23, 23, 0.7);
+    border: 1px solid black;
+}
+.content p {
+    margin: 5%;
+    font-weight: bold;
+    color: #ffbf00c4;
+    opacity: 1;
+}
+footer{
+    background: #2e2e2e;
+    background-size: 500px 400px;
+    text-align: center;
+    margin-top: 0px;
+    height: 100px;
+    font-size:xx-small;
+
 }
