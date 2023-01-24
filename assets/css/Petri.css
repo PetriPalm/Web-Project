@@ -32,3 +32,11 @@ footer{
         font-size: large;
         color: #ffbf00c4;
     }
+    a:link{
+        color:#ffbf00c4;
+    }
+    a:visited{
+        color:rgb(132, 0, 255);
+    }
+    a:hover{
+        color:rgb(255, 255, 255);}
