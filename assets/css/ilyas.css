@@ -1,11 +1,17 @@
+
+
 body{
     background-color: #272727;
     font-family: 'Times New Roman', Times, serif;
 }
+
+
+
 h1{
 color: #ffbf00c4;
 
 }
+
 
 .header{
     background: #2e2e2e;
@@ -19,12 +25,20 @@ color: #ffbf00c4;
 * {
     box-sizing: border-box;
   }
+  .section {
+    float:left
+  }
+
+  input, textarea {
+    background-color: #12120fc4;
+    }
+
   
   input[type=text], select, textarea {
     width: 100%;
     padding: 12px;
-    border: 1px solid rgba(220, 44, 44, 0.038);
-    margin-top: 6px;
+    border: 1px solid rgba(37, 79, 195, 0.038);
+    margin-top: 3px;
     margin-bottom: 16px;
     resize: vertical;
   }
@@ -44,7 +58,7 @@ color: #ffbf00c4;
   }
   
   .container {
-    border-radius: 5px;
+    border-radius: 3px;
     background: #2e2e2e;
     padding: 10px;
   }
@@ -52,7 +66,7 @@ color: #ffbf00c4;
   .column {
     float: left;
     width: 50%;
-    margin-top: 6px;
+    margin-top: 2px;
     padding: 20px;
   }
   
