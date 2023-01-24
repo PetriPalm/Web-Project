@@ -31,7 +31,7 @@ a:visited{
     color:rgb(132, 0, 255);
 }
 a:hover{
-    color:rgb(255, 255, 255);
+    color:rgb(255, 255, 255) !important;
 }
 img {
     border-style:solid;
