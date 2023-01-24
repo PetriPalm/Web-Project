@@ -12,6 +12,23 @@
 h2{
     text-align: center;
     color: #ffbf00c4;
-    background-color: #2e2e2e81;
+   /* background-color: #2e2e2e81; */
     
 }
+.content {
+    margin: 10px;
+    background: rgba(23, 23, 23, 0.7);
+    border: 1px solid black;}
+footer{
+    background: #2e2e2e;
+    background-size: 500px 400px;
+    text-align: center;
+    margin-top: 0px;
+    height: 100px;
+    font-size:xx-small;
+    }
+    p{
+        text-align:center;
+        font-size: large;
+        color: #ffbf00c4;
+    }
