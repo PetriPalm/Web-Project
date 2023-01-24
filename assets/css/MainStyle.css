@@ -2,6 +2,10 @@ body{
     background-color: #272727;
     font-family: 'Times New Roman', Times, serif;
 }
+.body1{
+    background-color: #272727;
+    font-family: 'Times New Roman', Times, serif;
+}
 h1{
 color: #ffbf00c4;
 
@@ -14,4 +18,9 @@ color: #ffbf00c4;
     margin-top: 0px;
     height: 100px;
     
+}
+.nav{
+    text-align:center;
+    font-size: large;
+    color: #ffbf00c4;
 }
