@@ -6,12 +6,13 @@ body{
 .body1{
     background-color: #272727;
     font-family: 'Times New Roman', Times, serif;
+    color:#ffbf00c4;
 }
 h1{
 color: #ffbf00c4;
 
 }
-
+h5{color: #ffbf00c4;}
 .header{
     background: #2e2e2e;
     background-size: 500px 400px;
@@ -21,7 +22,6 @@ color: #ffbf00c4;
     
 }
 .nav{
-    text-align:center;
-    font-size: large;
+    
     color: #ffbf00c4;
 }
