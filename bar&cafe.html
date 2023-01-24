@@ -7,6 +7,7 @@
     <title>Bar & Cafe page</title>
     <link href="assets/css/MainStyle.css" rel="stylesheet" type="text/css">
     <link href="assets/css/Juuso.css" rel="stylesheet" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
         <style>
             h1{
                 text-align: center;
@@ -16,11 +17,11 @@
                 border: 2px solid black;
                 opacity: 1;
             }
-
+            
         </style>
 </head>
 
-<body>
+<body class="body1">
     <header>
         <div class="header">
             <br>
@@ -29,8 +30,36 @@
     </header>
         <article>
             <div class="background">
-            <h2> What are we serving? </h2>
+    
+            <div class="d-flex justify-content-center">
+                <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                    <div class="container-fluid nav ">
+                      <a class="navbar-brand nav" ></a>
+                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                          <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="Index.html">Home</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="games.html">Games</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="bar&cafe.html">Bar & cafe</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="contactpage.html">Reservations & Contact</a>
+                          </li>
+                        </ul>
+        
+                      </div>
+                    </div>
+                  </nav>
+            </div>
                 <div class="content">
+                    <h2> What are we serving? </h2>
                     <p>
                         
                         
@@ -69,7 +98,8 @@
             </div>
         </article>
     <footer>
-        <h1><br><br>SPAWN Gaming Bar & Coffee</h1>
+        <h5><br><br>SPAWN Gaming Bar & Coffee</h5>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>    
 </body>
 </html>
