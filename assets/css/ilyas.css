@@ -96,9 +96,9 @@ a:link {
   }
   
   .container {
-    border-radius: 3px;
-    background: #2e2e2e;
-    padding: 10px;
+    margin: 10px;
+    background: rgba(23, 23, 23, 0.7);
+    border: 1px solid black;
   }
   
   .column {
