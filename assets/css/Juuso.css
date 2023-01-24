@@ -21,11 +21,13 @@ h4{
     color: #ffbf00c4;
     text-decoration: underline;  
 }
+
 p{
     text-align: center;
     font-size: large;
     color: #ffbf00c4;
 }
+
 p2{
     display: flex;
     text-align: center;
@@ -33,21 +35,23 @@ p2{
     color: #ffbf00c4;
 }
 
-
 .content {
     margin: 30px;
     background: rgba(23, 23, 23, 0.7);
     border: 1px solid black;
 }
+
 .content p {
     margin: 5%;
+    margin-top: 65px;
     font-weight: bold;
     color: #ffbf00c4;
     opacity: 1;
 }
+
 .content p2 {
     margin-top: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 65px;
     margin-left: 130px;
     font-weight: bold;
     font-size: large;
@@ -55,7 +59,6 @@ p2{
     opacity: 1;
     
 }
-
 
 footer{
     background: #2e2e2e;
