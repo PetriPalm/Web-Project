@@ -3,19 +3,22 @@
 body{
     background-color: #272727;
     font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    flex-direction: column;
+    height: auto;
     
 }
 .background {
     opacity: 0.5;
-}
-
-
-h1{
-color: #ffbf00c4;
 
 }
 
 
+
+h2 {
+  color:  #ffbf00c4;
+
+}
 .header{
     background: #2e2e2e;
     background-size: 500px 400px;
@@ -30,6 +33,7 @@ color: #ffbf00c4;
 }
 
 * {
+    margin: 5px;
     box-sizing: border-box;
   }
   .section {
@@ -37,14 +41,14 @@ color: #ffbf00c4;
   }
 
   input, textarea {
-    background-color: #23231ec4;
+    background-color: #12120fc4;
     }
 
   
   input[type=text], select, textarea {
     width: 100%;
     padding: 12px;
-    border: 1px solid rgba(44, 44, 228, 0.038);
+    border: 1px solid rgba(37, 79, 195, 0.038);
     margin-top: 3px;
     margin-bottom: 16px;
     resize: vertical;
@@ -59,10 +63,6 @@ color: #ffbf00c4;
     cursor: pointer;
     float: right;
   }
-
-  textarea:focus, input:focus {
-    color: #ffbf00c4;
-}
   .sidebar {
     font-size: large;
 
