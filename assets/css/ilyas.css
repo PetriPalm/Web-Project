@@ -70,12 +70,32 @@ color: #ffbf00c4;
 
 
 
+  .footer {
+    background-color: #4a4d4a;
+    opacity: 1; 
+    border-color:#ffbf00c4;
+    border: solid #ffbf00c4;
+    position:absolute;
+    bottom:0;
+    width: 100%;
+    height:20px;
+    
+    
+    
+    
+  }
+
   footer {
     background-color: #4a4d4a;
     opacity: 1; 
     border-color:#ffbf00c4;
     border: solid #ffbf00c4;
-    padding-bottom: 10px;
+    position:absolute;
+    bottom:0;
+    width: 100%;
+    height:70px;
+    
+    
     
   }
 
