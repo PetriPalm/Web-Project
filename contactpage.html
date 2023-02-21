@@ -79,16 +79,16 @@ background-repeat: no-repeat;
         <div class="col-6 column2 color1">
         <h2 style="color:#ffbf00c4;">Reservation</h2>
          
-            <form action="/action_page.php">
+            <form action="">
                 <label for="firstname"  style="color:#ffbf00c4;">Full name</label>
-                <input type="text" id="fname" name="firstname & lastname" placeholder="Name">
+                <input type="text" id="fname" name="firstname & lastname" placeholder="Name" value="">
                
                 <label for="Email" style="color:#ffbf00c4;">Email</label>
-                <input type="text" id="email" name="email" placeholder="Email address">
+                <input type="text" id="email" name="email" placeholder="Email address" value="">
                
                 
                 <label for="details" style="color:#ffbf00c4;">Details</label>
-                <textarea id="details" name="subject" placeholder="Other details about the reservation"></textarea>
+                <textarea id="details" name="subject" placeholder="Other details about the reservation (max 250 characters)" value="" maxlength="250"></textarea>
                 <input type="submit" value="Submit"> </form>
             
         </div>   
