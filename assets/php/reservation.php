@@ -10,13 +10,13 @@ catch(Exception $e){
 
 //Luetaan lomakkeelta tulleet tiedot funktiolla $_POST
 //jos syötteet ovat olemassa
-$name=isset($_POST["name"]) ? $_POST["name"] : "";
+$fname=isset($_POST["name"]) ? $_POST["name"] : "";
 $email=isset($_POST["email"]) ? $_POST["email"] : "";
 $details=isset($_POST["details"]) ? $_POST["details"] :"";
 
 //Jos ei jompaa kumpaa tai kumpaakaan tietoa ole annettu
 //ohjataan pyyntö takaisin lomakkeelle
-if (empty($name) || empty($email)|| empty($details) ){
+if (empty($fname) || empty($email)|| empty($details) ){
     header("Location:../contactpage.html");
     exit;
 }
@@ -28,7 +28,7 @@ $sql="insert into reservation (name, email, details) values(?, ?, ?)";
 //Valmistellaan sql-lause
 $stmt=mysqli_prepare($yhteys, $sql);
 //Sijoitetaan muuttujat oikeisiin paikkoihin
-mysqli_stmt_bind_param($stmt, 'sss', $name, $email, $details);
+mysqli_stmt_bind_param($stmt, 'sss', $fname, $email, $details);
 //Suoritetaan sql-lause
 mysqli_stmt_execute($stmt);
 //Suljetaan tietokantayhteys
