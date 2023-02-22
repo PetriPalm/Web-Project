@@ -10,7 +10,7 @@ $details=isset($_POST["details"]) ? $_POST["details"] : "";
 //Jos ei jompaa kumpaa tai kumpaakaan tietoa ole annettu
 //ohjataan pyyntö takaisin lomakkeelle
 if (empty($date) || empty($fname) || empty($email) || empty($details)){
-    header("Location:./reservation.php");
+    header("Location:./savereservation.php");
     exit;
 }
 
@@ -38,5 +38,5 @@ mysqli_stmt_execute($stmt);
 //Suljetaan tietokantayhteys
 mysqli_close($yhteys);
 
-header("Location:./reservation.php");
+header("Location:./savereservation.php");
 ?>
