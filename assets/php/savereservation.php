@@ -1,7 +1,7 @@
 <?php
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 try{
-    $yhteys=mysqli_connect("db", "root", "password", "");
+    $yhteys=mysqli_connect("db", "root", "password", "register");
 }
 catch(Exception $e){
     header("Location:../html/yhteysvirhe.html");

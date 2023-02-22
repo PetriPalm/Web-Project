@@ -8,7 +8,7 @@ if (empty($muokattava)){
 }
 mysqli_report(MYSQLI_REPORT_ALL ^ MYSQLI_REPORT_INDEX);
 try{
-    $yhteys=mysqli_connect("db", "root", "password", "");
+    $yhteys=mysqli_connect("db", "root", "password", "register");
 }
 catch(Exception $e){
     header("Location:../html/yhteysvirhe.html");
@@ -32,7 +32,7 @@ if (!$rivi=mysqli_fetch_object($tulos)){
 <!-- Lomake sisältää php-osuuksia, joilla tulostetaan syötekenttiin luetun tietueen tiedot -->
 <!-- id-kenttä on readonly, koska sitä ei ole tarkoitus muuttaa -->
 
-<form action='./paivitahenkilo.php' method='post'>
+<form action='./updatereservation.php' method='post'>
 id:<input type='text' name='id' value='<?php print $rivi->id;?>' readonly><br>
 Date:<input type='' name='date' value='<?php print $rivi->date;?>'><br>
 Full name:<input type='text' name='full name' value='<?php print $rivi->fname;?>'><br>
