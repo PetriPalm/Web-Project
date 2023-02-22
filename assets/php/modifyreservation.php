@@ -3,7 +3,7 @@ $muokattava=isset($_GET["muokattava"]) ? $_GET["muokattava"] : "";
 
 //Jos tietoa ei ole annettu, palataan listaukseen
 if (empty($muokattava)){
-    header("Location:./reservation.php");
+    header("Location:./savereservation.php");
     exit;
 }
 mysqli_report(MYSQLI_REPORT_ALL ^ MYSQLI_REPORT_INDEX);
@@ -14,7 +14,7 @@ catch(Exception $e){
     header("Location:../html/yhteysvirhe.html");
     exit;
 }
-$sql="select * from henkilo where id=?";
+$sql="select * from reservation where id=?";
 $stmt=mysqli_prepare($yhteys, $sql);
 //Sijoitetaan muuttuja sql-lauseeseen
 mysqli_stmt_bind_param($stmt, 'i', $muokattava);
