@@ -17,7 +17,7 @@ $details=isset($_POST["details"]) ? $_POST["details"] :"";
 
 //Jos ei jompaa kumpaa tai kumpaakaan tietoa ole annettu
 //ohjataan pyyntö takaisin lomakkeelle
-if  (empty($date)) || (empty($fname) || empty($email) || empty($details) ){
+if  (empty($date))||(empty($fname)||empty($email)||empty($details) ){
     header("Location:../contactpage.html");
     exit;
 }
