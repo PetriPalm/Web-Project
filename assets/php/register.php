@@ -8,7 +8,7 @@ catch(Exception $e){
     exit;
 }
 if  (empty($email))||(empty($password)){
-    header("Location:../contactpage.html");
+    header("Location:../index.html");
     exit;
 }
 $email = isset($_POST["email"]) ? $_POST["email"]: "";
@@ -16,7 +16,7 @@ $password = isset($_POST["psw"]) ? $_POST["psw"]: "";
 
 $sql="insert into account (email, psw,) values(?, ?)";
 $stmt=mysqli_prepare($connection, $sql);
-mysqli_stmt_bind_param($stmt, 'ss', $email, $psw );
+mysqli_stmt_bind_param($stmt, 'ss', $email, $password);
     $connection=mysqli_connect("");
     $database=mysqli_select();
     mysqli_stmt_execute($stmt);
