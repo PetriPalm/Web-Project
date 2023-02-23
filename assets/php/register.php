@@ -7,7 +7,7 @@ catch(Exception $e){
     header("Location:../html/yhteysvirhe.html");
     exit;
 }
-if  (empty($email))||(empty($password)){
+if  (!empty($email) && !empty($password)){
     header("Location:../index.html");
     exit;
 }
@@ -22,10 +22,7 @@ mysqli_stmt_bind_param($stmt, 'ss', $email, $password);
     mysqli_stmt_execute($stmt);
     mysqli_close($connection);
 
-catch(Exception $e){
-    header ("Location:..");
-    exit;
-}
+
 
 
 
