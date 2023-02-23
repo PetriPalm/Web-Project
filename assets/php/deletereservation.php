@@ -4,7 +4,7 @@
         $yhteys=mysqli_connect("db", "root", "password", "register");
     }
     catch(Exception $e){
-        header("Location:../html/yhteysvirhe.html");
+        header("Location:..connectionerror.html");
         exit;
     }
 $poistettava = isset($_GET["poistettava"]) ? $_GET["poistettava"] : "";
