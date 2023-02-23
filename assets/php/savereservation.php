@@ -11,7 +11,7 @@ try{
     $yhteys=mysqli_connect("db", "root", "password", "register");
 }
 catch(Exception $e){
-    header("Location:../html/yhteysvirhe.html");
+    header("Location:..connectionerror.html");
     exit;
 }
 
@@ -25,20 +25,24 @@ catch(Exception $e){
 //Jos ei jompaa kumpaa tai kumpaakaan tietoa ole annettu
 //ohjataan pyyntö takaisin lomakkeelle
 if  (!empty($date) && !empty($fname) && !empty($email) && !empty($details) ){
+    $sql = "insert into reservation (date, name, email, details) values(?, ?, ?, ?)";
+    //Valmistellaan sql-lause
+    $stmt = mysqli_prepare($yhteys, $sql);
+    //Sijoitetaan muuttujat oikeisiin paikkoihin
+    mysqli_stmt_bind_param($stmt, 'isss', $date, $fname, $email, $details);
+    //Suoritetaan sql-lause
+    mysqli_stmt_execute($stmt);
     header("Location:../contactpage.html");
-    exit;
+    exit;  
 }
-
-//Tehdään sql-lause, jossa kysymysmerkeillä osoitetaan paikat
-//joihin laitetaan muuttujien arvoja
-$sql="insert into reservation (date, name, email, details) values(?, ?, ?, ?)";
-
-//Valmistellaan sql-lause
-$stmt=mysqli_prepare($yhteys, $sql);
-//Sijoitetaan muuttujat oikeisiin paikkoihin
-mysqli_stmt_bind_param($stmt, 'isss', $date, $fname, $email, $details);
-//Suoritetaan sql-lause
-mysqli_stmt_execute($stmt);
+print "<table border='1'>";
+$tulos=mysqli_query($yhteys, "select * from reservation");
+while ($rivi=mysqli_fetch_object($tulos)){
+    print "<tr><td>$rivi->date <td>$rivi->fname <td>$rivi->email <td>$rivi->details".
+    "<td><a href='./poistahenkilo.php?poistettava=$rivi->id'>Poista</a>".
+    "<td><a href='./muokkaahenkilo.php?muokattava=$rivi->id'>Muokkaa</a>";
+}
+print "</table>";
 //Suljetaan tietokantayhteys
 mysqli_close($yhteys);
 ?>
