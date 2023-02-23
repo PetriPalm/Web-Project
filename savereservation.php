@@ -4,7 +4,7 @@ try{
     $yhteys=mysqli_connect("db", "root", "password", "register");
 }
 catch(Exception $e){
-    header("Location:../html/yhteysvirhe.html");
+    header("Location:..connectionerror.html");
     exit;
 }
 
@@ -28,6 +28,14 @@ if  (!empty($date) && !empty($fname) && !empty($email) && !empty($details) ){
     header("Location:../contactpage.html");
     exit;  
 }
+print "<table border='1'>";
+$tulos=mysqli_query($yhteys, "select * from reservation");
+while ($rivi=mysqli_fetch_object($tulos)){
+    print "<tr><td>$rivi->date <td>$rivi->fname <td>$rivi->email <td>$rivi->details".
+    "<td><a href='./poistahenkilo.php?poistettava=$rivi->id'>Poista</a>".
+    "<td><a href='./muokkaahenkilo.php?muokattava=$rivi->id'>Muokkaa</a>";
+}
+print "</table>";
 //Suljetaan tietokantayhteys
 mysqli_close($yhteys);
 ?>
