@@ -1,11 +1,11 @@
 <?php
 
-$date=isset($_POST["date"]) ? $_POST["date"] : "";
-$fname=isset($_POST["name"]) ? $_POST["name"] : "";
-$email=isset($_POST["email"]) ? $_POST["email"] : "";
-$details=isset($_POST["details"]) ? $_POST["details"] :"";
+$date = isset($_POST["date"]) ? $_POST["date"] : "";
+$fname = isset($_POST["name"]) ? $_POST["name"] : "";
+$email = isset($_POST["email"]) ? $_POST["email"] : "";
+$details = isset($_POST["details"]) ? $_POST["details"] :"";
 
-mysqli_report(MYSQLI_REPORT_ALL ^ MYSQLI_REPORT_INDEX);
+mysqli_report(MYSQLI_REPORT_ALL | MYSQLI_REPORT_INDEX);
 
 try{
     $yhteys=mysqli_connect("db", "root", "password", "register");
