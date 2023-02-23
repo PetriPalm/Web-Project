@@ -21,4 +21,5 @@ mysqli_stmt_bind_param($stmt, 'ss', $email, $password);
     $database=mysqli_select();
     mysqli_stmt_execute($stmt);
     mysqli_close($connection);
+    
 ?>
