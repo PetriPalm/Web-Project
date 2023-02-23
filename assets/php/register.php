@@ -14,9 +14,9 @@ if  (empty($email))||(empty($password)){
 $email = isset($_POST["email"]) ? $_POST["email"]: "";
 $password = isset($_POST["psw"]) ? $_POST["psw"]: "";
 
-$sql="insert into account (email, psw,) values(?, ?, ?, ?)";
+$sql="insert into account (email, psw,) values(?, ?)";
 $stmt=mysqli_prepare($connection, $sql);
-mysqli_stmt_bind_param($stmt, 'isss', $date, $fname, $email, $details);
+mysqli_stmt_bind_param($stmt, 'ss', $email, $psw );
     $connection=mysqli_connect("");
     $database=mysqli_select();
     mysqli_stmt_execute($stmt);
