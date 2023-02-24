@@ -27,7 +27,6 @@ if (!$rivi=mysqli_fetch_object($tulos)){
 }
 ?>
 
-
 <form action='./updateregister.php' method='post'>
 id:<input type='text' name='id' value='<?php print $rivi->id;?>' readonly><br>
 Email:<input type='text' name='email' value='<?php print $rivi->email;?>'><br>
@@ -36,5 +35,6 @@ psw:<input type='text' name='psw' value='<?php print $rivi->password;?>'><br>
 </form>
 
 <?php
+//Yhteys suljetaan
 mysqli_close($yhteys);
 ?>
