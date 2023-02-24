@@ -1,7 +1,7 @@
 <?php
 $muokattava=isset($_GET["muokattava"]) ? $_GET["muokattava"] : "";
 
-//Jos tietoa ei ole annettu, palataan listaukseen
+//Palataan listaukseen jos tietoja ei ole annettu
 if (empty($muokattava)){
     header("Location:./savereservation.php");
     exit;
@@ -28,9 +28,9 @@ if (!$rivi=mysqli_fetch_object($tulos)){
     exit;
 }
 ?>
-<!-- Lomake tavallisena html-koodina php tagien ulkopuolella -->
+<!-- Lomake on tavallista HTML-koodia PHP:n ulkopuolella -->
 <!-- Lomake sisältää php-osuuksia, joilla tulostetaan syötekenttiin luetun tietueen tiedot -->
-<!-- id-kenttä on readonly, koska sitä ei ole tarkoitus muuttaa -->
+<!-- id-kenttä on readonly, koska sitä ei muuteta -->
 
 <form action='./updatereservation.php' method='post'>
 id:<input type='text' name='id' value='<?php print $rivi->id;?>' readonly><br>
@@ -40,7 +40,7 @@ Email:<input type='text' name='email' value='<?php print $rivi->email;?>'><br>
 Details:<input type='text' name='details' value='<?php print $rivi->details;?>'><br>
 <input type='submit' name='ok' value='ok'><br>
 </form>
-<!-- loppuun uusi php-osuus -->
+
 <?php
 //Suljetaan tietokantayhteys
 mysqli_close($yhteys);

@@ -14,14 +14,6 @@ catch(Exception $e){
     header("Location:..connectionerror.html");
     exit;
 }
-
-//Luetaan lomakkeelta tulleet tiedot funktiolla $_POST
-//jos syötteet ovat olemassa
-//$date=isset($_POST["date"]) ? $_POST["date"] : "";
-//$fname=isset($_POST["name"]) ? $_POST["name"] : "";
-//$email=isset($_POST["email"]) ? $_POST["email"] : "";
-//$details=isset($_POST["details"]) ? $_POST["details"] :"";
-
 //Jos ei jompaa kumpaa tai kumpaakaan tietoa ole annettu
 //ohjataan pyyntö takaisin lomakkeelle
 if  (!empty($date) && !empty($fname) && !empty($email) && !empty($details) ){
