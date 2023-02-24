@@ -1,7 +1,6 @@
 <?php
 $muokattava=isset($_GET["email"]) ? $_GET["psw"] : "";
 
-
 if (empty($muokattava)){
     header("Location:./register.php");
     exit;
@@ -23,20 +22,19 @@ mysqli_stmt_execute($stmt);
 
 $tulos=mysqli_stmt_get_result($stmt);
 if (!$rivi=mysqli_fetch_object($tulos)){
-    header("Location:../html/tietuettaeiloydy.html");
+    header("Location:../html/connectionerror.html");
     exit;
 }
 ?>
 
 
-<form action='./updatereservation.php' method='post'>
+<form action='./updateregister.php' method='post'>
 id:<input type='text' name='id' value='<?php print $rivi->id;?>' readonly><br>
 Email:<input type='text' name='email' value='<?php print $rivi->email;?>'><br>
-psw:<input type='text' name='psw' value='<?php print $rivi->details;?>'><br>
+psw:<input type='text' name='psw' value='<?php print $rivi->password;?>'><br>
 <input type='submit' name='ok' value='ok'><br>
 </form>
 
 <?php
-
 mysqli_close($yhteys);
 ?>
