@@ -39,8 +39,8 @@ print "<table border='1'>";
 $tulos=mysqli_query($yhteys, "select * from reservation");
 while ($rivi=mysqli_fetch_object($tulos)){
     print "<tr><td>$rivi->date <td>$rivi->fname <td>$rivi->email <td>$rivi->details".
-    "<td><a href='./poistahenkilo.php?poistettava=$rivi->id'>Poista</a>".
-    "<td><a href='./muokkaahenkilo.php?muokattava=$rivi->id'>Muokkaa</a>";
+    "<td><a href='./deletereservation.php?poistettava=$rivi->id'>Poista</a>".
+    "<td><a href='./modifyreservation.php?muokattava=$rivi->id'>Muokkaa</a>";
 }
 print "</table>";
 //Suljetaan tietokantayhteys
