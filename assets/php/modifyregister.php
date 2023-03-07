@@ -10,7 +10,7 @@ try{
     $yhteys=mysqli_connect("db", "root", "password", "register");
 }
 catch(Exception $e){
-    header("Location:../html/yhteysvirhe.html");
+    header("Location:../html/connectionerror.html");
     exit;
 }
 $sql="select * from reservation where id=?";
