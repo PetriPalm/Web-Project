@@ -13,7 +13,7 @@ catch(Exception $e){
     header("Location:../html/connectionerror.html");
     exit;
 }
-$sql="select * from reservation where id=?";
+$sql="select * from account where id=?";
 $stmt=mysqli_prepare($yhteys, $sql);
 
 mysqli_stmt_bind_param($stmt, 'i', $muokattava);
